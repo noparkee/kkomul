@@ -9,7 +9,7 @@ public class CharacterController : MonoBehaviour
     float slow = 1; 
         //캐릭터의 상태에 따른 둔화율
     int score = 0;
-    //float span = 1.0f, delta = 0;
+    float span = 3.0f, delta = 0;
     // 시간간격 체크
 
     public GameObject Character;
@@ -37,12 +37,18 @@ public class CharacterController : MonoBehaviour
         if (state == 1)
         {
             slow = 0.1f;
-            //3초 후 state=0
+            //3초 후 state=2  //아이템을 쓰지 않는이상
         }
         if (state == 2)
         {
             slow = 0f;
             //destroy, 3초 후 부활, start와 같은 함수
+            this.delta += Time.deltaTime;
+            if (this.delta > this.span)
+            {
+                
+               this.delta = 0;
+            }
         }
 
         //캐릭터 이동: 이동속도 비례
