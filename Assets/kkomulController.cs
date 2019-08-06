@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class kkomulController : MonoBehaviour
 {
-    int state = 0;
+    public int state = 0;
     int direction;
 
     float span = 3.0f;
     float delta = 0;
+
+    float free = 0;
+    float sur = 3.0f;
 
     //GameObject block;
 
@@ -43,8 +46,9 @@ public class kkomulController : MonoBehaviour
             }
 
             //블록과 충돌하면 direction 의 random 값을 다시 설정
-
-            Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
+            //Vector3 pos = this.gameObject.transform.position;
+            
+           Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
             if (pos.x < 0.1f)
             {
                 pos.x = 0.1f;
@@ -70,10 +74,19 @@ public class kkomulController : MonoBehaviour
         if (state == 1)
         {
             transform.Translate(0, 0, 0);
+
+            this.free += Time.deltaTime;
+            if (this.free > this.sur)
+            {
+                state = 0;
+                this.free = 0;
+            }
+
         }
         if (state == 2)
         {
             Destroy(this.gameObject);
+            this.delta = 0;
         }
 
         this.delta += Time.deltaTime;

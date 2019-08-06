@@ -4,7 +4,7 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - Character: {fileID: 8233924192872671716, guid: 3535a658c9bf0f84a964359a4080a39b,
+  - Character: {fileID: 3884551793845283547, guid: 77adcfe9c23891849b319a629fd6902b,
       type: 3}
   - BombPrefab: {fileID: 304417239618975342, guid: aa310c51e36cbd243938aef0ca823cf3,
       type: 3}

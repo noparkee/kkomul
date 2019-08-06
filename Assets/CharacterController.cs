@@ -9,12 +9,16 @@ public class CharacterController : MonoBehaviour
     float slow = 1; 
         //캐릭터의 상태에 따른 둔화율
     int score = 0;
+
     float span = 3.0f, delta = 0;
     // 시간간격 체크
+
+    float wtime = 0;    //물풍선 안에 있는 시간
 
     public GameObject Character;
     public GameObject BombPrefab;
 
+    kkomulController kkomulstate = GameObject.Find("kkomulePrefab").GetComponent<kkomulController>();
     void Start()
     {
         this.Character = GameObject.Find("Character");
@@ -37,11 +41,17 @@ public class CharacterController : MonoBehaviour
         if (state == 1)
         {
             slow = 0.1f;
+            this.wtime += Time.deltaTime;
+            if (this.wtime > this.span)
+            {
+                state = 2;
+                this.delta = 0;
+            }
             //3초 후 state=2  //아이템을 쓰지 않는이상
         }
         if (state == 2)
         {
-            slow = 0f;
+            Destroy(this.gameObject);
             //destroy, 3초 후 부활, start와 같은 함수
             this.delta += Time.deltaTime;
             if (this.delta > this.span)
@@ -87,7 +97,7 @@ public class CharacterController : MonoBehaviour
     //rigidBody가 무언가와 충돌할때 호출되는 함수 입니다.
     //Collider2D other로 부딪힌 객체를 받아옵니다.
     {
-        if (other.gameObject.tag.Equals("bigkkomule"))
+        if (other.gameObject.tag.Equals("bigkkomule") && kkomulstate.state == 0)
         //부딪힌 객체의 태그를 비교해서 적인지 판단합니다.
         {
             //적을 파괴합니다.
@@ -97,7 +107,6 @@ public class CharacterController : MonoBehaviour
 
         if (other.gameObject.tag.Equals("line")) {
             state = 1;
-
         }
 
         /*if (other.gameObject.tag.Equals("block")) {

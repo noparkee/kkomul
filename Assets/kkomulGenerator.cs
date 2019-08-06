@@ -20,7 +20,7 @@ public class kkomulGenerator : MonoBehaviour
             GameObject kkomul;
             kkomul = Instantiate(kkomulPrefab) as GameObject;
             px = Random.Range(-10, 11);
-            py = Random.Range(-6, 7);
+            py = Random.Range(-7, 8);
             kkomul.transform.position = new Vector3(px, py, 0);
         }
     }
