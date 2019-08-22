@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LineController : MonoBehaviour
 {
-    public GameObject LinePrefab;
+    public GameObject linePrefab;
     float span = 0.5f;
     float delta = 0;
     void Update()
@@ -12,7 +12,7 @@ public class LineController : MonoBehaviour
         this.delta += Time.deltaTime;
         if (this.delta > this.span)
         {
-            Destroy(LinePrefab);
+            Destroy(linePrefab);
             this.delta = 0;
         }
     }

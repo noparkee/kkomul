@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3716389526948051260}
   - component: {fileID: 7950787705399781504}
-  - component: {fileID: 3025279742986751615}
+  - component: {fileID: 5121725392782775180}
   - component: {fileID: 6982467168344598135}
-  - component: {fileID: 4999412876089810693}
+  - component: {fileID: 5258071468473610143}
   m_Layer: 0
   m_Name: bigkkomulePrefab
   m_TagString: bigkkomule
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3025279742986751615
+--- !u!114 &5121725392782775180
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,9 +91,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8518280460384638886}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 762bbcf677b66264996656b67d0c57d9, type: 3}
+  m_Script: {fileID: 11500000, guid: af21e47f2f9319c4f93a4a713afb0742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
 --- !u!60 &6982467168344598135
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -104,7 +105,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -161,7 +162,7 @@ PolygonCollider2D:
       - {x: 11.953125, y: -11.9765625}
       - {x: 11.425781, y: -10.875}
       - {x: 10.207031, y: -8.4609375}
---- !u!50 &4999412876089810693
+--- !u!50 &5258071468473610143
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
