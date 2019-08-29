@@ -43,7 +43,7 @@ public class BombController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Line")
+        if (other.gameObject.tag == "line")
         {
             delta = 2.5f;
         }

@@ -9,13 +9,13 @@ public class kkomulGenerator : MonoBehaviour
     int px, py;
     float span = 3.5f;
     float delta = 0;
-    int cnt = 5;
+    int cnt = 3;
     int all = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 3; i++)
         {
             GameObject kkomul;
             kkomul = Instantiate(kkomulPrefab) as GameObject;
@@ -29,7 +29,7 @@ public class kkomulGenerator : MonoBehaviour
     void Update()
     {
         this.delta += Time.deltaTime;
-        if (this.all < 40)      //전체 꼬물이가 40마리 이하일 떄 까지만 생성, 터트리면 all 감소.
+        if (this.all < 30)      //전체 꼬물이가 30마리 이하일 떄 까지만 생성, 터트리면 all 감소.
         {
             if (this.delta > this.span)
             {

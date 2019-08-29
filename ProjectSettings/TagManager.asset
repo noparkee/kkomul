@@ -9,6 +9,9 @@ TagManager:
   - block
   - line
   - Bomb
+  - speed
+  - medicine
+  - bombUp
   layers:
   - Default
   - TransparentFX

@@ -3,7 +3,15 @@ guid: 34c558275fa46e742af851a414958178
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - linePrefab: {fileID: 5943476640104914807, guid: 88484b28d6c945a4190dd35fade92a89,
+      type: 3}
+  - medicine: {fileID: 7277668242536056531, guid: f4e50c041a94f9542809a5583c7ba27f,
+      type: 3}
+  - bombUp: {fileID: 7839107689838235310, guid: 7be9ea85e658fc8488cb12f026c6101e,
+      type: 3}
+  - speed: {fileID: 596009115861120195, guid: 4c3e4cbb2a56ed24985617e0103063b0, type: 3}
+  - character: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
